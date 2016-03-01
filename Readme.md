@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Надежда Пияр](https://up.htmlacademy.ru/adaptive/6/user/124821).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Балабанович](https://up.htmlacademy.ru/adaptive/6/user/6394).
 
 ---
 
