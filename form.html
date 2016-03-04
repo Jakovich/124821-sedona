@@ -24,6 +24,15 @@
       <img src="" alt="Sedona">
     </div>
 
+    <header class="review">
+      <h1 class="review__title">
+        Оставьте свой отзыв
+      </h1>
+      <p class="review_explic">
+        Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+      </p>
+    </header>
+
     <form action="post" class="form" action="/">
      <fieldset class="form-item">
        <legend class="form-item__title">
@@ -68,12 +77,30 @@
 
       </fieldset>
 
+      <fieldset class="form-item">
+        <legend class="form-item__title">
+          Посещенные достопримечательности:
+        </legend>
+        <input type="checkbox" id="bridge" checked>
+        <label for="bridge">Мост дьявола</label>
+        <input type="checkbox" id="park" checked>
+        <label for="park">Слайд-парк</label>
+        <input type="checkbox" id="mountain">
+        <label for="mountain">Гора-Колокол</label>
+        <input type="checkbox" id="rocks" checked>
+        <label for="rocks">Красные скалы</label>
+      </fieldset>
+
+      <fieldset class="form-item">
+        <legend class="form-item__title">
+          Опишите свои эмоции:
+        </legend>
+        <textarea rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+      </fieldset>
+
+      <button type="submit" class="form-button">Отправить отзыв</button>
 
     </form>
-
-
-
-
 
      <footer class="page-footer">
       <div class="page-footer__tag">
