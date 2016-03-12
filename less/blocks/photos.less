@@ -2,3 +2,77 @@
   .border;
   border-color: spin(@base-color,250);
 }
+
+.photos {
+  padding: 0 20px;
+}
+
+@media @tablet-widths {
+
+  .media {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .photos {
+    .clearfix;
+    padding: 0;
+  }
+
+  .photo__item{
+    float: left;
+    width: 50%;
+  }
+
+
+
+  .photo__item:first-child {
+    width: 100%;
+  }
+
+    .photo__describ {
+    .clearfix;
+    background-color: @bg-grey;
+  }
+
+  .photo__img {
+    max-height: 450px;
+  }
+
+  .photo__text{
+    float: left;
+    padding-left: 20px;
+  }
+
+  .photo__likes {
+    float: right;
+    padding-right: 20px;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .media {
+    padding: 0;
+  }
+
+   .photo__item {
+     width: 33.3333%;
+     position: relative;
+   }
+
+  .photo__img {
+    min-height: 400px;
+    max-height: 450px;
+  }
+
+  .photo__describ {
+    position: absolute;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: rgba(0,0,0,0.3);
+    color: #ffffff;
+  }
+}
