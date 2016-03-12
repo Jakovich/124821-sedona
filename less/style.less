@@ -1,11 +1,27 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/'ptsans.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/'ptsansbold.woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 @import "node_modules/normalize.less/normalize.less";
 @import "variables.less";
 @import "mixins.less";
 @import "global/wrapper.less";
+@import "global/button.less";
 @import "blocks/page-header.less";
 @import "blocks/page-footer.less";
 @import "blocks/intro.less";
 @import "blocks/review.less";
+@import "blocks/advantages.less";
 @import "blocks/reasons.less";
 @import "blocks/form.less";
 @import "blocks/photos.less";
@@ -13,5 +29,7 @@
 @import "blocks/hotel-search.less";
 
 body {
-  background-color: rgba(0,0,0,0.1);
+  background-color: #f2f2f2;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 16px;
 }

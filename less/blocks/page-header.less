@@ -2,3 +2,31 @@
   .border;
   border-color: @base-color;
 }
+
+
+.main-nav {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.main-nav__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav__item {
+  text-align: center;
+}
+
+@media @tablet-widths {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__item {
+    display: inline-block;
+  }
+}

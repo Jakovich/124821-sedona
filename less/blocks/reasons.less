@@ -1,5 +1,61 @@
 .reasons {
   .border;
   border-color: spin(@base-color, 180);
+}
 
+.reason__item {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.reason__text {
+  background-color: @bg-blue;
+  text-align: center;
+  padding: 25px 12px;
+  color: #ffffff;
+}
+
+.reason__item--short {
+  background-color: @bg-grey;
+  padding: 25px 35px;
+  color: #000000;
+}
+
+@media @tablet-widths {
+  .reason__item,
+  .reasons__items {
+    .clearfix;
+  }
+
+  .reason__text {
+    box-sizing: border-box;
+    float: left;
+    width: 33.3333%;
+    min-height: 260px;
+  }
+
+  .reason__img {
+    box-sizing: border-box;
+    float: right;
+    width: 66.6667%;
+  }
+
+    .reason-item:nth-child(1) {
+      .reason__text {
+         float:right;
+      }
+      .reason__img {
+        float:left;
+      }
+    }
+
+  .reason__item--short {
+    float:right;
+    width:33.3333%;
+  }
+
+  .reason__item--short .reason__title {
+    padding-left:30px;
+    padding-right:30px;
+  }
 }
