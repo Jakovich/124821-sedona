@@ -3,9 +3,62 @@
   border-color: spin(@base-color,45);
 }
 
+.page-footer__social {
+  .border;
+  border-color: spin(@base-color,145);
+  min-height: 45px;
+}
+
+
 .page-footer {
   text-align: center;
 }
+
+
+@media @tablet-widths {
+
+ .page-footer {
+   .clearfix;
+   padding:0 60px;
+}
+  .page-footer__tag {
+    float: left;
+    width: 192px;
+    text-align: left;
+  }
+
+  .page-footer__social {
+    float:left;
+    width: 252px;
+  }
+
+  .page-footer__copyright {
+    float:right;
+    text-align: right;
+    width: 192px;
+  }
+}
+
+
+@media @desktop-widths {
+  .page-footer {
+    padding: 0 120px;
+  }
+
+    .page-footer__tag  {
+      width: 230px;
+    }
+
+    .page-footer__social {
+    width: 350px;
+  }
+
+  .page-footer__copyright {
+    width: 350px;
+  }
+}
+
+
 
 
 

@@ -2,3 +2,40 @@
   .border;
   border-color: spin(@base-color, 345);
 }
+
+.form {
+  padding: 0 20px;
+}
+
+.form-field__comment {
+  width: 100%;
+}
+
+ .form-field__contact-wrap input{
+    width: 100%;
+  }
+
+@media @tablet-widths {
+
+  .form {
+    padding:0 60px;
+  }
+
+  .form-field__sights-wrap {
+    float: left;
+    width: 50%;
+  }
+
+}
+
+
+@media @desktop-widths {
+  .form {
+  padding: 0 120px;
+  }
+
+  .form-field__sights-wrap {
+    float: left;
+    width: 25%;
+  }
+}
