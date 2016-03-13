@@ -15,10 +15,16 @@
     width: 100%;
   }
 
+.form__explic {
+  display: none;
+}
+
 @media @tablet-widths {
 
   .form {
     padding:0 60px;
+    position: relative;
+    .clearfix;
   }
 
   .form-field__sights-wrap {
@@ -26,10 +32,32 @@
     width: 50%;
   }
 
+  .form-field:first-child {
+   padding-left: 50%;
+  }
+
+  .form-field:nth-child(3) {
+    position: absolute;
+    top:0;
+    left:60px;
+  }
+
+  .form .button {
+    float:left;
+    width: 50%;
+  }
+
+  .form__explic {
+    display: block;
+    margin:40px 0;
+    float: right;
+  }
+
 }
 
 
 @media @desktop-widths {
+
   .form {
   padding: 0 120px;
   }
@@ -38,4 +66,16 @@
     float: left;
     width: 25%;
   }
+
+  .form-field__contact-wrap {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 10px;
+  }
+
+    .form-field:nth-child(3) {
+       left:120px;
+    }
+
 }
