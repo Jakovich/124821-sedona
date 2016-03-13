@@ -7,6 +7,22 @@
   padding: 0 20px;
 }
 
+.form-field__name-wrap {
+  .clearfix;
+}
+
+.form-field__name-wrap label {
+  float: left;
+}
+
+.form-field__name-wrap input {
+  float: right;
+  width: 65%;
+}
+.form-field__name-wrap:nth-child(2) input{
+  width: 75%;
+}
+
 .form-field__comment {
   width: 100%;
 }
@@ -40,6 +56,13 @@
     position: absolute;
     top:0;
     left:60px;
+  }
+
+  .form-field__name-wrap input {
+  width: 70%;
+  }
+.form-field__name-wrap:nth-child(2) input{
+  width: 80%;
   }
 
   .form .button {
@@ -77,5 +100,13 @@
     .form-field:nth-child(3) {
        left:120px;
     }
+
+    .form-field__name-wrap input {
+      width: 80%;
+    }
+
+    .form-field__name-wrap:nth-child(2) input{
+      width: 90%;
+      }
 
 }
