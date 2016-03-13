@@ -29,25 +29,32 @@
 
   .reason__text {
     box-sizing: border-box;
-    float: left;
     width: 33.3333%;
     min-height: 260px;
   }
 
   .reason__img {
     box-sizing: border-box;
-    float: right;
     width: 66.6667%;
   }
 
-    .reason-item:nth-child(1) {
+    .reason__item:nth-child(2n+1) {
       .reason__text {
+         float:left;
+      }
+      .reason__img {
+        float:right;
+      }
+    }
+
+  .reason__item:nth-child(2n) {
+     .reason__text {
          float:right;
       }
       .reason__img {
         float:left;
       }
-    }
+  }
 
   .reason__item--short {
     float:right;
@@ -58,4 +65,5 @@
     padding-left:30px;
     padding-right:30px;
   }
-}
+
+  }
