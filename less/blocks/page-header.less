@@ -2,3 +2,68 @@
   .border;
   border-color: @base-color;
 }
+
+
+.main-nav {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding: 15px 0;
+  text-align: center;
+  .clearfix;
+}
+
+.main-nav__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav__item {
+  text-align: center;
+  padding: 10px 0;
+}
+
+  .page-header__logo {
+    position: absolute;
+    bottom:-40px;
+    left: 50%;
+    margin-left: -54px;
+  }
+
+  .main-nav__toogle {
+    float: right;
+  }
+
+@media @tablet-widths {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__item {
+    display: inline-block;
+    padding: 10px 0;
+    width: 20%;
+  }
+
+  .main-nav__item a {
+    width: 100%;
+  }
+
+  .main-nav__item:nth-child(2) {
+    padding-right:30px;
+  }
+
+  .main-nav__item:nth-child(3) {
+      margin-left: 60px;
+    }
+
+  .page-header__logo {
+    top:0;
+  }
+
+  .main-nav__toogle {
+    display: none;
+  }
+}

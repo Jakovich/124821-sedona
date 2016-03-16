@@ -1,0 +1,31 @@
+.advantages {
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.advantage__item {
+  box-sizing: border-box;
+  padding-left: 70px;
+  padding-right: 15px;
+}
+
+@media @tablet-widths {
+
+  .advantages {
+    .clearfix;
+  }
+
+  .advantage__item {
+    float: left;
+    width: 33.3333%;
+    padding: 75px 15px 15px 10px;
+    text-align: center;
+  }
+}
+
+@media @desktop-widths {
+   .advantage__item {
+     padding-left: 40px;
+     padding-right: 40px;
+   }
+}
