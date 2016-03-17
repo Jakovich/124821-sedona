@@ -7,20 +7,56 @@
   box-sizing: border-box;
   padding-left: 70px;
   padding-right: 15px;
+  position: relative;
 }
+
+.advantage__item:before {
+  content:'';
+  width: 40px;
+  height: 40px;
+  left:15px;
+  position: absolute;
+  background-repeat: no-repeat;
+
+  background-size: contain;
+}
+.advantage__item--home:before{
+background-image: url('../../img/icon-house.svg');
+}
+.advantage__item--food:before{
+background-image: url('../../img/icon-burger.svg');
+}
+.advantage__item--souvenir:before{
+background-image: url('../../img/icon-gift.svg');
+}
+
+
 
 @media @tablet-widths {
 
   .advantages {
-    .clearfix;
+    display: flex;
+    width: 100%;
   }
 
   .advantage__item {
-    float: left;
-    width: 33.3333%;
-    padding: 75px 15px 15px 10px;
+    padding: 75px 50px 10px 50px;
     text-align: center;
+    flex-basis: 33.3333%;
+    flex-row:1;
+    outline: 1px yellow solid;
   }
+
+  .advantage__item:before {
+    left: 50%;
+    margin-left: -20px;
+    top:35px;
+  }
+
+  .advantage__item--souvenir {
+    order: 1;
+  }
+
 }
 
 @media @desktop-widths {
