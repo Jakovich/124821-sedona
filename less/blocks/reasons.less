@@ -38,6 +38,7 @@
 
   .reason__item {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
   }
 
@@ -51,9 +52,16 @@
     box-sizing: border-box;
   }
 
-    .reason__img img {
-      width: 100%;
-    }
+  .reason__img img {
+    width: 100%;
+    display: block;
+  }
+
+  .reason__item:nth-child(2n) {
+      .reason__img {
+        order:-1;
+      }
+  }
 
   .reason__item--short {
     width: 33.333%;
