@@ -26,7 +26,7 @@
   background-color: @bg-grey;
   border: none;
   box-sizing: border-box;
-  margin-top:10px;
+  margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px 20px;
   color: #000000;
@@ -37,33 +37,58 @@
 }
 
 .form-field__name-wrap label {
-  flex-grow: 1;
+  flex-grow: 0;
   margin-right: 10px;
   align-self: center;
 }
 
 .form-field__name-wrap input {
- flex-grow: 25;
+ flex-grow: 1;
 }
 
-.form-field__comment {
-  box-sizing: border-box;
+.form-field__name-wrap:nth-child(n+3) label{
+  flex-basis: 70px;
+}
+
+
+/*контактная информация*/
+.form-field__contact-wrap input{
   width: 100%;
-  background-color: @bg-grey;
-  border: none;
-  padding:15px;
+  padding-right: 58px;
 }
 
- .form-field__contact-wrap input{
-    width: 100%;
-  }
+.form-field__contact-wrap label {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+}
+
+.form-field__contact-wrap label::before {
+  content:"";
+  position: absolute;
+  width: 58px;
+  height: 38px;
+  top: 28px;
+  right: 0;
+  background-color: #e6e6e6;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-field__contact-wrap label[for="email"]::before {
+  background-image: url('../../img/icon-mail.svg');
+}
+
+.form-field__contact-wrap label[for="telephone"]::before {
+  background-image: url('../../img/icon-phone.svg');
+}
 
 .form__explic {
   display: none;
 }
 
  .form .button {
-   border:none;
+   border: none;
   }
 
 /*стилизация раздела отзывов*/
@@ -85,7 +110,7 @@
   margin-top: 20px;
   margin-bottom: 40px;
   text-transform: none;
-  position:relative;
+  position: relative;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -94,8 +119,8 @@
 .form-field__feedback-wrap label::before {
   content:"";
   position: absolute;
-  left:0;
-  top:-15px;;
+  left: 0;
+  top: -15px;;
   width: 55px;
   height: 55px;
   background-color: #f2f2f2;
@@ -103,10 +128,10 @@
 }
 
 .form-field__feedback-wrap input:checked~label::after {
-  content:"";
+  content: "";
   position: absolute;
-  left:18px;
-  top:3px;;
+  left: 18px;
+  top: 3px;;
   width: 20px;
   height: 20px;
   background-color: #333333;
@@ -131,13 +156,13 @@
 }
 
 .form-field__sights-wrap label:before {
-  content:"";
+  content: "";
   position: absolute;
   width: 55px;
   height: 55px;
   border-radius: 5px;
-  left:0;
-  top:-15px;;
+  left: 0;
+  top: -15px;;
   background-color: #f2f2f2;
 }
 
@@ -146,14 +171,20 @@
   position: absolute;
   width: 24px;
   top: 5px;
-  left:15px;
+  left: 15px;
   height: 17px;
   background-image: url("../../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
+.form-field__comment {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: @bg-grey;
+  border: none;
+  padding: 15px;
+}
 
 
 @media @tablet-widths {
