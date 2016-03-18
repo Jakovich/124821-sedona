@@ -51,7 +51,7 @@
       <form action="post" class="form" action="/">
         <fieldset class="form-field">
           <legend class="form-field__title">
-            Представьтесь<span class="hide">, пожалуйста</span>:
+            Представьтесь<span class="name-hide">, пожалуйста</span>:
          </legend>
          <div class="form-field__name-wrap">
            <label for="last-name">Имя:</label>
@@ -72,7 +72,7 @@
             Контактная информация:
           </legend>
           <div class="form-field__contact-wrap">
-            <label for="telephone">Контактный телефон:</label>
+            <label for="telephone"><span class="contact-hide">Контактный</span> телефон:</label>
             <input type="tel" placeholder="Введите телефон" id="telephone">
           </div>
           <div class="form-field__contact-wrap">
@@ -101,21 +101,23 @@
           <legend class="form-field__title">
             Посещенные достопримечательности:
           </legend>
-          <div class="form-field__sights-wrap">
-            <input type="checkbox" id="bridge" checked>
-            <label for="bridge">Мост дьявола</label>
-          </div>
-          <div class="form-field__sights-wrap">
-            <input type="checkbox" id="park" checked>
-            <label for="park">Слайд-парк</label>
-          </div>
-          <div class="form-field__sights-wrap">
-            <input type="checkbox" id="mountain">
-            <label for="mountain">Гора-Колокол</label>
-          </div>
-          <div class="form-field__sights-wrap">
-            <input type="checkbox" id="rocks" checked>
-            <label for="rocks">Красные скалы</label>
+          <div class="sights__container">
+            <div class="form-field__sights-wrap">
+              <input type="checkbox" id="bridge" checked>
+              <label for="bridge">Мост дьявола</label>
+            </div>
+            <div class="form-field__sights-wrap">
+              <input type="checkbox" id="park" checked>
+              <label for="park">Слайд-парк</label>
+            </div>
+            <div class="form-field__sights-wrap">
+              <input type="checkbox" id="mountain">
+              <label for="mountain">Гора-Колокол</label>
+            </div>
+            <div class="form-field__sights-wrap">
+              <input type="checkbox" id="rocks" checked>
+              <label for="rocks">Красные скалы</label>
+            </div>
           </div>
         </fieldset>
 
