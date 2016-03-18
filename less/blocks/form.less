@@ -3,9 +3,10 @@
 }
 
 .form-field {
-   border: none;
+  border: none;
   display: block;
   margin-bottom: 25px;
+  padding: 0;
 }
 
 .form-field legend {
@@ -15,6 +16,9 @@
   font-weight: bold;
   padding-bottom: 15px;
   text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
   width: 100%;
 }
 
@@ -57,6 +61,100 @@
 .form__explic {
   display: none;
 }
+
+ .form .button {
+   border:none;
+  }
+
+/*стилизация раздела отзывов*/
+.form-field__feedback-wrap label {
+  padding-left: 60px;
+  display: block;
+  margin-bottom: 25px;
+  text-transform: none;
+  position: relative;
+}
+
+.form-field__feedback-wrap input {
+  display: none;
+}
+
+.form-field__feedback-wrap label {
+  padding-left: 70px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-transform: none;
+  position:relative;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.form-field__feedback-wrap label::before {
+  content:"";
+  position: absolute;
+  left:0;
+  top:-15px;;
+  width: 55px;
+  height: 55px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.form-field__feedback-wrap input:checked~label::after {
+  content:"";
+  position: absolute;
+  left:18px;
+  top:3px;;
+  width: 20px;
+  height: 20px;
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+/*стилизация раздела посещенных достопримечательностей*/
+.form-field__sights-wrap input {
+  display: none;
+}
+
+.form-field__sights-wrap label {
+  position: relative;
+  display: block;
+  padding-left: 70px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: none;
+  margin-top: 20px;
+  margin-bottom: 55px;
+}
+
+.form-field__sights-wrap label:before {
+  content:"";
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 5px;
+  left:0;
+  top:-15px;;
+  background-color: #f2f2f2;
+}
+
+.form-field__sights-wrap input:checked~label::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  top: 5px;
+  left:15px;
+  height: 17px;
+  background-image: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
 
 @media @tablet-widths {
 
