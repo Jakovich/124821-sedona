@@ -1,25 +1,30 @@
 .form {
-  padding: 0 20px;
+  padding: 0 0;
 }
 
 .form-field {
   border: none;
   display: block;
+  margin:0;
   margin-bottom: 25px;
   padding: 0;
 }
+.form-field__name-wrap {
+  padding:0 20px;
+}
 
 .form-field legend {
-  border-top: 1px solid grey;
-  padding: 0;
+  border-top: 1px solid #e5e5e5;
   padding-top: 15px;
   font-weight: bold;
   padding-bottom: 15px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+  width:100%;
   line-height: 26px;
-  width: 100%;
+  /*margin-left: -20px;
+  width: 115%;*/
 }
 
 .form-field input {
@@ -28,7 +33,9 @@
   box-sizing: border-box;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 10px 20px;
+  padding: 18px 20px;
+  font-size: 18px;
+  font-weight: bold;
   color: #000000;
 }
 
@@ -44,6 +51,7 @@
 
 .form-field__name-wrap input {
  flex-grow: 1;
+  width: 20px;
 }
 
 .form-field__name-wrap:nth-child(n+3) label{
@@ -52,6 +60,10 @@
 
 
 /*контактная информация*/
+.form-field__contact-wrap {
+  padding: 0 20px;
+}
+
 .form-field__contact-wrap input{
   width: 100%;
   padding-right: 58px;
@@ -67,7 +79,7 @@
   content:"";
   position: absolute;
   width: 58px;
-  height: 38px;
+  height: 58px;
   top: 28px;
   right: 0;
   background-color: #e6e6e6;
@@ -92,6 +104,10 @@
   }
 
 /*стилизация раздела отзывов*/
+.form-field__feedback-wrap {
+ padding:0 20px;
+}
+
 .form-field__feedback-wrap label {
   padding-left: 60px;
   display: block;
@@ -139,6 +155,10 @@
 }
 
 /*стилизация раздела посещенных достопримечательностей*/
+.form-field__sights-wrap {
+  padding: 0 20px;
+}
+
 .form-field__sights-wrap input {
   display: none;
 }
@@ -178,12 +198,18 @@
   background-position: center;
 }
 
+.comment__inner {
+  padding: 0 20px;
+}
+
 .form-field__comment {
   box-sizing: border-box;
   width: 100%;
   background-color: @bg-grey;
   border: none;
   padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 

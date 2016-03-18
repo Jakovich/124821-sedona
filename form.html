@@ -51,7 +51,7 @@
       <form action="post" class="form" action="/">
         <fieldset class="form-field">
           <legend class="form-field__title">
-           Представьтесь, пожалуйста:
+            Представьтесь<span class="hide">, пожалуйста</span>:
          </legend>
          <div class="form-field__name-wrap">
            <label for="last-name">Имя:</label>
@@ -123,7 +123,9 @@
           <legend class="form-field__title">
             Опишите свои эмоции:
           </legend>
-          <textarea class="form-field__comment" rows="6" placeholder="Опишите подробно все свои восторги"></textarea>
+          <div class="comment__inner">
+            <textarea class="form-field__comment" rows="6" placeholder="Опишите подробно все свои восторги"></textarea>
+          </div>
         </fieldset>
 
         <button type="submit" class="button">Отправить отзыв</button>
