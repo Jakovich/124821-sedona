@@ -1,21 +1,20 @@
 .form {
-  padding: 0 0;
+  padding: 0 20px;
+  margin-bottom: 40px;
 }
 
 .form-field {
   border: none;
   display: block;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding: 0;
 }
 
-.form-field__name-wrap {
-  padding:0 20px;
-}
+
 
 .form-field__title {
-  border-top: 1px solid #e5e5e5;
+  /*border-top: 1px solid #e5e5e5;*/
   padding-top: 15px;
   font-weight: bold;
   padding-bottom: 15px;
@@ -24,8 +23,7 @@
   font-weight: bold;
   width:100%;
   line-height: 26px;
-  /*margin-left: -20px;
-  width: 115%;*/
+  position: relative;
 }
 
 .form-field input {
@@ -62,7 +60,6 @@
 
 /*контактная информация*/
 .form-field__contact-wrap {
-  padding: 0 20px;
    position: relative;
 }
 
@@ -72,9 +69,16 @@
 }
 
 .form-field__contact-wrap label {
- /*position: relative;*/
   display: block;
   padding-left: 20px;
+  margin-top:10px;
+}
+
+.error {
+  padding-left:20px;
+  text-transform: none;
+  color: #ff5c5c;
+  margin-bottom: 20px;
 }
 
 .form-field__contact-wrap::before {
@@ -83,18 +87,18 @@
   width: 58px;
   height: 58px;
   top: 28px;
-  right: 20px;
+  right: 0;
   background-color: #e6e6e6;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .form-field__contact-wrap:nth-child(2)::before {
-  background-image: url('../../img/icon-mail.svg');
+  background-image: url('../../img/icon-phone.svg');
 }
 
 .form-field__contact-wrap:nth-child(3)::before {
-  background-image: url('../../img/icon-phone.svg');
+  background-image: url('../../img/icon-mail.svg');
 }
 
 .form__explic {
@@ -102,9 +106,6 @@
 }
 
 /*стилизация раздела отзывов*/
-.form-field__feedback-wrap {
- padding:0 20px;
-}
 
 .form-field__feedback-wrap label {
   padding-left: 60px;
@@ -131,7 +132,7 @@
 }
 
 .form-field__feedback-wrap label::before {
-  content:"";
+  content: "";
   position: absolute;
   left: 0;
   top: -15px;;
@@ -153,9 +154,6 @@
 }
 
 /*стилизация раздела посещенных достопримечательностей*/
-.form-field__sights-wrap {
-  padding: 0 20px;
-}
 
 .form-field__sights-wrap input {
   display: none;
@@ -196,10 +194,6 @@
   background-position: center;
 }
 
-.comment__inner {
-  padding: 0 20px;
-}
-
 .form-field__comment {
   box-sizing: border-box;
   width: 100%;
@@ -210,13 +204,26 @@
   font-weight: bold;
 }
 
+@media @mobile-widths {
+
+.form-field__title::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: #e5e5e5;
+  right: -20px;
+  left: -20px;
+  top: -7px;
+}
+}
+
 
 @media @tablet-widths {
 
   .form {
-    padding: 0 40px;
+    padding: 0 60px;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     box-sizing: border-box;
     margin-bottom: 35px;
   }
@@ -224,11 +231,11 @@
   .form-field:nth-child(3) {
     order: -1;
     box-sizing: border-box;
-    width:56%;
+    width:57%;
   }
 
   .form-field:nth-child(1) {
-    width: 44%;
+    width: 43%;
     box-sizing: border-box;
     position: relative;
   }
@@ -252,7 +259,7 @@
     top: -65px;
     width: 1px;
     background-color: #e5e5e5;
-    left: -45px;
+    left: -50px;
   }
 
   .form-field:nth-child(1) .form-field__title{
@@ -281,6 +288,11 @@
     position: relative;
   }
 
+  .form-field:nth-child(2) .form-field__title {
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
   .form-field:nth-child(2) .form-field__title::before,
   .form-field:nth-child(4) .form-field__title::before,
   .form-field:nth-child(5) .form-field__title::before {
@@ -289,7 +301,7 @@
     height: 1px;
     width: 125px;
     background-color: #e5e5e5;
-    left:20px;
+    left: 0;
     top: 30px;
     z-index: 5;
   }
@@ -302,13 +314,24 @@
     height: 1px;
     width: 125px;
     background-color: #e5e5e5;
-    right:20px;
+    right: 0;
     top: 30px;
     z-index: 5;
   }
 
+  .error {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
   .name-hide {
     display: none;
+  }
+
+  .comment__inner {
+    margin-top: 15px;
+    margin-bottom: 40px;
   }
 
   .sights__container {
@@ -320,7 +343,7 @@
   }
 
   .form-field__sights-wrap{
-    flex-basis: 200px;
+    flex-basis: 210px;
   }
 
   .form-field__sights-wrap:nth-child(2) {
@@ -338,13 +361,7 @@
   .form__explic {
     display: inline-block;
     margin-left: auto;
-    margin-right: 20px;
     line-height: 55px;
-  }
-
-  .form button {
-    margin:0;
-    margin-left: 20px;
   }
 
 }
@@ -353,7 +370,7 @@
 @media @desktop-widths {
 
   .form {
-  padding: 0 100px;
+  padding: 0 120px;
   }
 
   .form-field__title {
@@ -383,6 +400,11 @@
 
   .contact-hide {
     display: none;
+  }
+
+  .error {
+    left: 100px;
+    top: -15px;
   }
 
   .form-field:nth-child(3) .form-field__title{
