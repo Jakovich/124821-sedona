@@ -30,7 +30,7 @@
 
   .page-header__logo {
     position: absolute;
-    bottom:-32px;
+    bottom: -32px;
     left: 50%;
     margin-left: -54px;
   }
@@ -46,15 +46,30 @@
 
   .main-nav__toogle {
     float: right;
-  }
-
-  .main-nav__toogle {
-    float: right;
     border: none;
     background-color: #ffffff;
     margin: 15px 20px;
   }
 
+@media @mobile-widths {
+
+  .main-nav__wrapper--closed {
+    display: none;
+  }
+
+  .main-nav__close {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 16px;
+    right: 20px;
+    width: 23px;
+    height: 23px;
+    background-image: url("../../img/icon-cross.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
 
 @media @tablet-widths {
 
