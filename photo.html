@@ -28,7 +28,7 @@
             <img class="logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="City of Sedona">
           </div>
 
-          <button class="main-nav__toogle"><img src="img/icon-menu.svg" alt=""></button>
+          <button class="main-nav__toogle"></button>
 
         </nav>
       </header>
@@ -51,7 +51,11 @@
 
         <div class="photos">
           <div class="photo__item">
-            <img class="photo__img" src="img/photo-1-mobile.jpg" width="100%" alt="Photo 1">
+           <picture>
+             <source media="(min-width:1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+             <source media="(min-width:768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+            <img class="photo__img" src="img/photo-1-mobile.jpg" alt="Photo 1">
+            </picture>
             <div class="photo__describ">
               <div class="photo__text">
                 <h3 class="photo__title">Неродные просторы</h3>
@@ -62,7 +66,11 @@
           </div>
 
           <div class="photo__item">
-            <img class="photo__img" src="img/photo-2-mobile.jpg" width="100%" alt="Photo 2">
+           <picture>
+             <source media="(min-width:1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+             <source media="(min-width:768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+              <img class="photo__img" src="img/photo-2-mobile.jpg" alt="Photo 2">
+            </picture>
             <div class="photo__describ">
               <div class="photo__text">
                 <h3 class="photo__title">Местная растительность</h3>
@@ -73,7 +81,11 @@
           </div>
 
           <div class="photo__item">
-            <img class="photo__img" src="img/photo-3-mobile.jpg" width="100%" alt="Photo 3">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+              <img class="photo__img" src="img/photo-3-mobile.jpg" alt="Photo 3">
+            </picture>
             <div class="photo__describ">
               <div class="photo__text">
                 <h3 class="photo__title">Дорогая на Север</h3>
@@ -84,7 +96,10 @@
           </div>
 
           <div class="photo__item">
-            <img class="photo__img" src="img/photo-4-mobile.jpg" width="100%" height="280" alt="Photo 4">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+              <img class="photo__img" src="img/photo-4-mobile.jpg" alt="Photo 4">
             <div class="photo__describ">
               <div class="photo__text">
                 <h3 class="photo__title">Мост дьявола</h3>
@@ -105,16 +120,19 @@
             </p>
           </header>
 
-          <video class="video__item" poster="img/video-mobile.jpg" width="100%"></video>
-          <div class="video__menu">
-            <div class="video__runner">
-              <div class="runner__scale"></div>
-              <div class="runner__toogle"></div>
-             </div>
-             <div class="video__control">
-               <span class="video__replay"><img src="img/icon-video-replay.svg" alt=""></span>
-                <span class="video__subtitle"><img src="img/icon-video-subtitles.svg" alt=""></span>
-                <span class="video__full-screen"><img src="img/icon-video-fullscreen.svg" alt=""></span>
+
+          <div class="video">
+            <video class="video__item" poster="img/video-desktop.jpg" width="100%"></video>
+            <div class="video__menu">
+              <div class="video__runner">
+                <div class="runner__scale"></div>
+                <div class="runner__toogle"></div>
+               </div>
+               <div class="video__control">
+                 <span class="video__replay"><img src="img/icon-video-replay.svg" alt=""></span>
+                  <span class="video__subtitle"><img src="img/icon-video-subtitles.svg" alt=""></span>
+                  <span class="video__full-screen"><img src="img/icon-video-fullscreen.svg" alt=""></span>
+              </div>
             </div>
           </div>
       </section>
