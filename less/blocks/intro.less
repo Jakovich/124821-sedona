@@ -1,14 +1,38 @@
 .intro {
-  .border;
-  border-color: spin(@base-color, 90);
+  background-image: url("../../img/bg-intro-triangle-mobile.svg"), url("../../img/bg-back-mobile.jpg");
+  background-position: bottom, center bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-bottom: 65px;
+  margin-bottom: 8px;
 }
 
-.intro {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.intro--index {
+  background-position: bottom, center 0;
+  padding-top: 90px;
+  padding-bottom: 75px;
 }
 
 .intro__welcome {
   display: block;
   margin: 0 auto;
+}
+
+.intro__sedona {
+  display: block;
+  margin: 0 auto;
+}
+
+@media @tablet-widths {
+  .intro {
+    padding-top: 110px;
+    padding-bottom: 100px;
+  }
+}
+
+@media @desktop-widths {
+  .intro{
+  background-image: url("../../img/bg-intro-triangle-mobile.svg"), url("../../img/bg-back-desktop.jpg");
+  }
 }

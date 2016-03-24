@@ -43,15 +43,15 @@
           Оставьте свой отзыв
         </h1>
         <p class="review__explic">
-          Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+          Помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях
         </p>
       </header>
 
 
       <form action="post" class="form" action="/">
-        <fieldset class="form-field">
+        <fieldset class="form-field form-field--name">
           <legend class="form-field__title">
-           Представьтесь, пожалуйста:
+            Представьтесь<span class="name-hide">, пожалуйста</span>:
          </legend>
          <div class="form-field__name-wrap">
            <label for="last-name">Имя:</label>
@@ -67,13 +67,14 @@
          </div>
         </fieldset>
 
-        <fieldset class="form-field">
+        <fieldset class="form-field form-field--contact">
           <legend class="form-field__title">
             Контактная информация:
           </legend>
           <div class="form-field__contact-wrap">
-            <label for="telephone">Контактный телефон:</label>
+            <label for="telephone"><span class="contact-hide">Контактный</span> телефон:</label>
             <input type="tel" placeholder="Введите телефон" id="telephone">
+            <div class="error">Ошибка, перепроверьте номер</div>
           </div>
           <div class="form-field__contact-wrap">
             <label for="email">Электронная почта:</label>
@@ -81,7 +82,7 @@
           </div>
         </fieldset>
 
-        <fieldset class="form-field">
+        <fieldset class="form-field form-field--feedback">
           <legend class="form-field__title">Ваше общее впечатление</legend>
           <div class="form-field__feedback-wrap">
             <input type="radio" name="feedback" value="positive" id="positive" checked>
@@ -97,33 +98,35 @@
           </div>
         </fieldset>
 
-        <fieldset class="form-field">
+        <fieldset class="form-field form-field--sights">
           <legend class="form-field__title">
             Посещенные достопримечательности:
           </legend>
-          <div class="form-field__sights-wrap">
-            <input type="checkbox" id="bridge" checked>
-            <label for="bridge">Мост дьявола</label>
-          </div>
-          <div class="form-field__sights-wrap">
-            <input type="checkbox" id="park" checked>
-            <label for="park">Слайд-парк</label>
-          </div>
-          <div class="form-field__sights-wrap">
-            <input type="checkbox" id="mountain">
-            <label for="mountain">Гора-Колокол</label>
-          </div>
-          <div class="form-field__sights-wrap">
-            <input type="checkbox" id="rocks" checked>
-            <label for="rocks">Красные скалы</label>
+          <div class="sights__container">
+            <div class="form-field__sights-wrap">
+              <input type="checkbox" id="bridge" checked>
+              <label for="bridge">Мост дьявола</label>
+            </div>
+            <div class="form-field__sights-wrap">
+              <input type="checkbox" id="park" checked>
+              <label for="park">Слайд-парк</label>
+            </div>
+            <div class="form-field__sights-wrap">
+              <input type="checkbox" id="mountain">
+              <label for="mountain">Гора-Колокол</label>
+            </div>
+            <div class="form-field__sights-wrap">
+              <input type="checkbox" id="rocks" checked>
+              <label for="rocks">Красные скалы</label>
+            </div>
           </div>
         </fieldset>
 
-        <fieldset class="form-field">
+        <fieldset class="form-field form-field--comment">
           <legend class="form-field__title">
             Опишите свои эмоции:
           </legend>
-          <textarea class="form-field__comment" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="form-field__comment" rows="6" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
 
         <button type="submit" class="button">Отправить отзыв</button>
@@ -145,11 +148,12 @@
         </div>
 
         <div class="page-footer__copyright">
-          Разработано <a href="https://htmlacademy.ru" title="HTMLAcademy"><img width="27" height="35" src="img/logo-htmlacademy.svg" alt="HTMLAcademy"></a>
+          <span>Разработано</span> <a href="https://htmlacademy.ru" title="HTMLAcademy"><img width="27" height="35" src="img/logo-htmlacademy.svg" alt="HTMLAcademy"></a>
         </div>
       </footer>
 
     </div>
 
   </body>
+  <script src="js/main.js"></script>
 </html>
