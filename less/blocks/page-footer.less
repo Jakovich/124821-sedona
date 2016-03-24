@@ -1,44 +1,88 @@
 .page-footer {
-  .border;
-  border-color: spin(@base-color,45);
-}
-
-.page-footer {
   box-sizing: border-box;
   text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-.page-footer__social {
-  .border;
-  border-color: spin(@base-color,145);
-  min-height: 45px;
+.page-footer__tag {
+  font-size: 21px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.social-link {
+  margin: 0 2.5px;
+  display: block;
+  width: 46px;
+  height: 48px;
+  background-color: @bg-blue;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-link--twitter {
+  background-image: url("../../img/icon-twitter.svg");
+}
+
+.social-link--facebook {
+  background-image: url("../../img/icon-facebook.svg");
+}
+
+.social-link--youtube {
+  background-image: url("../../img/icon-youtube.svg");
+}
+
+.page-footer__copyright {
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
+.page-footer__copyright span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-footer__copyright a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-footer__copyright img {
+  display: block;
+}
 
 @media @tablet-widths {
 
- .page-footer {
-   .clearfix;
-   padding:0 60px;
-}
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 60px;
+  }
+
   .page-footer__tag {
-    float: left;
     box-sizing: border-box;
-    width: 192px;
     text-align: left;
+    flex-basis: 192px;
   }
 
   .page-footer__social {
-    float:left;
     box-sizing: border-box;
-    width: 252px;
   }
 
   .page-footer__copyright {
-    float:right;
     box-sizing: border-box;
     text-align: right;
-    width: 192px;
+     flex-basis: 192px;
   }
 }
 
@@ -46,22 +90,21 @@
 @media @desktop-widths {
 
   .page-footer {
-    padding: 0;
+    padding: 20px 0;
   }
 
   .page-footer__tag  {
-    width: 398px;
+    flex-basis: 398px;
     text-align: center;
     box-sizing: border-box;
   }
 
   .page-footer__social {
-    width: 398px;
     box-sizing: border-box;
   }
 
   .page-footer__copyright {
-    width: 398px;
+    flex-basis: 398px;
     padding-right: 40px;
     box-sizing: border-box;
   }

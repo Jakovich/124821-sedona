@@ -1,23 +1,65 @@
 .review {
-  .border;
-  border-color: spin(@base-color, 135);
+  text-align: center;
+  padding: 15px 20px;
+  margin: 0 auto;
 }
 
-.review {
-  text-align: center;
-  padding: 0 30px;
-  margin: 0 auto;
+.review__explic {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.review--index {
+  background-image: url("../../img/bg-intro-triangle-mobile_blue.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 25px;
 }
 
 .review__title {
   font-size: 21px;
+  line-height: 26px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
+
+.review__title--small {
+  font-size: 18px;
+}
+
+.review--short-padding {
+  padding-bottom:1px;
+}
+
 
 @media @tablet-widths {
 
   .review {
-    width: 500px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    width: 490px;
+  }
+
+  .review--index {
+    background: none;
+  }
+
+   .review__title {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .review__title--small {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .review--short-padding {
+    padding-bottom:1px;
   }
 
 }
+
 
