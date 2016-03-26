@@ -1,17 +1,17 @@
 .advantages {
   background-color: #ffffff;
   text-align: left;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   padding-top: 5px;
 }
 
 .advantage__item {
   box-sizing: border-box;
   padding-left: 70px;
-  padding-right: 15px;
+  padding-right: 20px;
   position: relative;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 28px;
+  margin-bottom: 28px;
 
   &::before {
     content:'';
@@ -23,6 +23,11 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+}
+
+.advantage__title {
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .advantage__item--home::before{
@@ -73,6 +78,10 @@
 }
 
 @media @desktop-widths {
+  .advantages {
+    padding-bottom: 30px;
+  }
+
   .advantage__item {
     padding-left: 65px;
     padding-right: 65px;

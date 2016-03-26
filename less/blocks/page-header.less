@@ -16,49 +16,49 @@
   text-align: center;
 }
 
-  .main-nav__item a {
-    display: block;
-    background-color: @bg-blue;
-    padding: 15px 0;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #ffffff;
-    border-bottom: 1px solid #678fa8;
-    border-top: 1px solid #9ac2db;
-  }
+.main-nav__item a {
+  display: block;
+  background-color: @bg-blue;
+  padding: 15px 0;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff;
+  border-bottom: 1px solid #678fa8;
+  border-top: 1px solid #9ac2db;
+}
 
-  .page-header__logo {
-    position: absolute;
-    bottom: -32px;
-    left: 50%;
-    margin-left: -54px;
-  }
+.page-header__logo {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  margin-left: -54px;
+}
 
-   .main-nav__item a:hover {
-     background-color: #669ec0;
-   }
+.main-nav__item a:hover {
+  background-color: #669ec0;
+}
 
-  .main-nav__item a:active {
-    background-color: #5496bd;
-    color: rgba(255,255,255,0.3);
-  }
+.main-nav__item a:active {
+  background-color: #5496bd;
+  color: rgba(255,255,255,0.3);
+}
 
-  .main-nav__toogle {
-    float: right;
-    border: none;
-    background-color: #ffffff;
-    margin: 15px 20px;
-    width: 23px;
-    height: 22px;
-    background-image: url("../img/icon-menu.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.main-nav__toogle {
+  float: right;
+  border: none;
+  background-color: #ffffff;
+  margin: 15px 20px;
+  width: 23px;
+  height: 22px;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-    .main-nav__toogle:focus{
-    outline: none;
-  }
+.main-nav__toogle:focus{
+  outline: none;
+}
 
 @media @mobile-widths {
 
@@ -85,8 +85,8 @@
   .main-nav {
     width: auto;
     margin: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .main-nav__item {
@@ -120,6 +120,18 @@
    .main-nav__item a:active {
      color: rgba(0,0,0,0.3);
    }
+
+  .main-nav__item--active a {
+    color: #766357;
+  }
+
+  .main-nav__item--active a:hover {
+    color: #604e43;
+  }
+
+  .main-nav__item--active a:active {
+    color: rgba(96,78,67,0.3);
+  }
 
   .page-header__logo {
     top: 0;
