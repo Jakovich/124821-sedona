@@ -24,6 +24,16 @@
   margin: 0 auto;
 }
 
+@media
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    .intro{
+    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
+      background-size: auto, 768px auto;
+    }
+  }
+
+
 @media @tablet-widths {
   .intro {
     padding-top: 110px;
@@ -35,6 +45,14 @@
 @media @desktop-widths {
   .intro{
   background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop.jpg");
+  }
+  @media
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+     .intro{
+   background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+       background-size: auto, 1200px auto;
+     }
   }
 }
 

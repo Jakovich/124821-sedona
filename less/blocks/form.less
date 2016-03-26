@@ -25,14 +25,23 @@
 
 .form-field input {
   background-color: @bg-grey;
-  border: none;
+  border: 4px solid transparent;
   box-sizing: border-box;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 18px 20px;
+  padding: 14px 16px;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: #ffffff;
+    border: 4px solid #e5e5e5;
+  }
 }
 
 /*ФИО*/
@@ -50,6 +59,7 @@
 .form-field__name-wrap input {
  flex-grow: 1;
   width: 20px;
+
 }
 
 .form-field__name-wrap:nth-child(n+3) label{
@@ -85,7 +95,7 @@
   position: absolute;
   width: 58px;
   height: 58px;
-  top: 28px;
+  top: 29px;
   right: 0;
   background-color: #e6e6e6;
   background-position: center;
@@ -156,6 +166,18 @@
   border-radius: 50%;
 }
 
+.form-field__feedback-wrap:hover label::before {
+  background-color: #e5e5e5;
+}
+
+.form-field__feedback-wrap:active label::before {
+  background-color: #d5d5d5;
+}
+
+.form-field__feedback-wrap:active input:checked~label::after {
+  background-color: #a4a4a4;
+}
+
 /*посещенные достопримечательности*/
 
 .form-field__sights-wrap input {
@@ -196,9 +218,21 @@
   top: 5px;
   left: 15px;
   height: 17px;
-  background-image: url("../../img/icon-tick.svg");
+  background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.form-field__sights-wrap:hover label::before {
+  background-color: #e5e5e5;
+}
+
+.form-field__sights-wrap:active label::before {
+  background-color: #d5d5d5;
+}
+
+.form-field__sights-wrap:active input:checked~label::after {
+  filter: opacity(0.3);
 }
 
 /*комментарии*/
