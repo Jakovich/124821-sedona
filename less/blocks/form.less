@@ -238,14 +238,24 @@
 /*комментарии*/
 .form-field__comment {
   box-sizing: border-box;
+  border: 4px solid transparent;
   width: 100%;
   background-color: @bg-grey;
-  border: none;
   padding: 15px;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 30px;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: #ffffff;
+    border: 4px solid #e5e5e5;
+  }
 }
+
 
 @media @mobile-widths {
 
