@@ -1,5 +1,5 @@
 .video {
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 
 .video__menu {
@@ -53,7 +53,34 @@
   cursor: pointer;
 }
 
+.video__subtitle svg,
+.video__full-screen svg,
+.video__replay svg {
+  fill: #5c6870;
+}
+
+
+.video__subtitle:hover svg,
+.video__full-screen:hover svg,
+.video__replay:hover svg {
+  fill: #333333;
+}
+
+.video__subtitle:active svg,
+.video__full-screen:active svg,
+.video__replay:active svg {
+  fill: #c1c1c1;
+}
+
+
+
+
 @media @tablet-widths {
+
+  .video {
+    margin-top: 25px;
+  }
+
   .video__control {
     background-color: transparent;
   }
@@ -82,13 +109,25 @@
     top: 40px;
     z-index:10;
   }
+
+  .video__subtitle svg,
+  .video__full-screen svg,
+  .video__replay svg {
+    fill: #ffffff;
+  }
+
+  .video__subtitle:hover svg,
+  .video__full-screen:hover svg,
+  .video__replay:hover svg {
+    fill: #c1c1c1;
+  }
 }
 
 @media @desktop-widths {
   .video {
     max-width: 800px;
     margin:0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
 
 }

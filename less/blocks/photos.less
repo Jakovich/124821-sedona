@@ -25,7 +25,7 @@
     height: 20px;
     left: 0;
     top: -3px;
-    background-image: url("../../img/icon-like.svg");
+    background-image: url("../img/icon-like.svg");
   }
 }
 
@@ -76,10 +76,6 @@
     background-color: #eaeaea;
   }
 
-  .photo__img {
-    max-height: 450px;
-  }
-
   .photo__text{
     padding-left: 20px;
   }
@@ -101,11 +97,6 @@
      position: relative;
    }
 
-  .photo__img {
-    min-height: 400px;
-    max-height: 450px;
-  }
-
   .photo__describ {
     position: absolute;
     bottom: 0;
@@ -117,5 +108,9 @@
 
    .photo__item:nth-child(n+2):nth-child(odd) .photo__describ {
     background-color: rgba(0,0,0,0.3);
+  }
+
+  .photo__likes::before {
+    filter: invert(1);
   }
 }

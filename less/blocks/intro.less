@@ -1,17 +1,22 @@
 .intro {
-  background-image: url("../../img/bg-intro-triangle-mobile.svg"), url("../../img/bg-back-mobile.jpg");
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile.jpg");
   background-position: bottom, center bottom;
-  background-size: auto;
+  background-size: 101%, auto;
   background-repeat: no-repeat;
   padding-top: 50px;
   padding-bottom: 65px;
   margin-bottom: 8px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 .intro--index {
   background-position: bottom, center 0;
   padding-top: 90px;
-  padding-bottom: 75px;
+  padding-bottom: 85px;
+   padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 8px;
 }
 
 .intro__welcome {
@@ -24,15 +29,67 @@
   margin: 0 auto;
 }
 
+@media
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    .intro{
+    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
+      background-size: auto, 768px auto;
+    }
+  }
+
+
 @media @tablet-widths {
   .intro {
-    padding-top: 110px;
-    padding-bottom: 100px;
+    padding-top: 95px;
+    padding-bottom: 115px;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-desktop.jpg");
+
+  }
+
+  .intro--index {
+    padding-right: 155px;
+    padding-left: 155px;
+    padding-top: 75px;
+    padding-bottom: 95px;
+  }
+    @media
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+     .intro{
+   background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+       background-size: auto, 1200px auto;
+     }
   }
 }
 
 @media @desktop-widths {
   .intro{
-  background-image: url("../../img/bg-intro-triangle-mobile.svg"), url("../../img/bg-back-desktop.jpg");
+  background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop.jpg");
+    padding-top: 105px;
+    padding-bottom: 120px;
+    padding-left: 370px;
+    padding-right: 370px;
+    margin-bottom: 50px;
+  }
+
+  .intro--index {
+    padding-left: 370px;
+    padding-right: 370px;
+    padding-top: 75px;
+    padding-bottom: 95px;
+    margin-bottom: 0;
+  }
+  @media
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+     .intro{
+   background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+       background-size: auto, 1200px auto;
+     }
   }
 }
+
+
