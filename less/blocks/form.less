@@ -12,12 +12,12 @@
 }
 
 .form-field__title {
-  padding-top: 15px;
+  padding-top: 10px;
   padding-bottom: 15px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  width:100%;
+  width: 100%;
   line-height: 26px;
   position: relative;
 }
@@ -26,8 +26,8 @@
   background-color: @bg-grey;
   border: 4px solid transparent;
   box-sizing: border-box;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 9px;
+  margin-bottom: 9px;
   padding: 14px 16px;
   font-size: 18px;
   font-weight: bold;
@@ -130,8 +130,8 @@
 .form-field__feedback-wrap label {
   padding-left: 70px;
   display: block;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 22px;
+  margin-bottom: 43px;
   text-transform: none;
   position: relative;
   font-size: 18px;
@@ -186,7 +186,7 @@
 .form-field__sights-wrap label {
   position: relative;
   display: block;
-  padding-left: 70px;
+  padding-left: 74px;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -242,6 +242,7 @@
   background-color: @bg-grey;
   padding: 15px;
   font-size: 18px;
+  line-height: 26px;
   font-weight: bold;
   margin-bottom: 30px;
 
@@ -272,21 +273,22 @@
 @media @tablet-widths {
 
   .form {
+    margin-top: 15px;
     padding: 0 60px;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    margin-bottom: 35px;
+    margin-bottom: 55px;
   }
 
   .form-field--feedback {
     order: -1;
     box-sizing: border-box;
-    width: 57%;
+    width: 58%;
   }
 
   .form-field--name {
-    width: 43%;
+    width: 42%;
     box-sizing: border-box;
     position: relative;
   }
@@ -306,18 +308,24 @@
   .form-field--name::before {
     content: '';
     position: absolute;
-    height: 125%;
+    /*height: 125%;*/
     top: -65px;
+    bottom: 0;
     width: 1px;
     background-color: #e5e5e5;
-    left: -50px;
+    left: -52px;
+  }
+  
+  .form-field__name-wrap label {
+    margin-right: 20px;
   }
 
   .form-field--name .form-field__title,
   .form-field--feedback .form-field__title {
     box-sizing: border-box;
-    padding-left: 20px;
+    padding-left: 0;
     padding-right: 20px;
+    margin-bottom: 35px;
     text-align: left;
   }
 
@@ -339,7 +347,7 @@
       height: 1px;
       width: 125px;
       background-color: #e5e5e5;
-      top: 30px;
+      top: 24px;
       z-index: 5;
       }
 
@@ -353,12 +361,12 @@
   }
 
   .form-field--contact .form-field__title {
-    margin-top: 30px;
+    margin-top: 28px;
     margin-bottom: 5px;
   }
 
   .form-field__feedback-wrap label {
-    margin-bottom: 55px;
+    margin-bottom: 53px;
   }
 
   .error {
@@ -370,35 +378,46 @@
   .name-hide {
     display: none;
   }
-
-  .form-field__comment {
+  
+  .form-field--sights .form-field__title {
     margin-top: 15px;
-    margin-bottom: 40px;
   }
+
+
 
   .sights__container {
     display: flex;
-    justify-content: center;
-    padding-left: 20px;
-    padding-right:20px;
+    justify-content: space-between;
+    padding-left: 90px;
+    padding-right: 90px;
     flex-wrap: wrap;
   }
 
   .form-field__sights-wrap{
     flex-basis: 210px;
+    margin-top: -10px;
+  }
+  
+  .form-field__sights-wrap label {
+    padding-left: 83px;
   }
 
   .form-field__sights-wrap:nth-child(2) {
     order:1;
   }
 
-   .form-field__sights-wrap:nth-child(3) {
-     order:0;
-   }
+  .form-field__sights-wrap:nth-child(3) {
+    order: 0;
+  }
 
-    .form-field__sights-wrap:nth-child(4) {
-     order:2;
+  .form-field__sights-wrap:nth-child(4) {
+    order:2;
    }
+   
+    .form-field__comment {
+    margin-top: 15px;
+    margin-bottom: 35px;
+    }
 
   .form__explic {
     display: inline-block;
@@ -412,6 +431,7 @@
 @media @desktop-widths {
 
   .form {
+    margin-top: 0;
     padding: 0 120px;
     margin-bottom: 65px;
   }
@@ -436,9 +456,14 @@
   }
 
   .form-field--name::before {
-    height: 125%;
-    top: -65px;
+    /*height: 125%;*/
+    top: 0;
+    bottom: 0;
     left: -70px;
+  }
+  
+  .name-hide {
+    display: inline;
   }
 
   .contact-hide {
@@ -489,4 +514,5 @@
     width: 42%;
     margin-right: 72px;
    }
+
 }
