@@ -308,13 +308,16 @@
   .form-field--name::before {
     content: '';
     position: absolute;
+    /*
     height: 125%;
-    top: -65px;
+    top: -65px*/;
+    top: 0;
+    bottom: 0;
     width: 1px;
     background-color: #e5e5e5;
     left: -52px;
   }
-  
+
   .form-field__name-wrap label {
     margin-right: 20px;
   }
@@ -377,7 +380,7 @@
   .name-hide {
     display: none;
   }
-  
+
   .form-field--sights .form-field__title {
     margin-top: 15px;
   }
@@ -396,7 +399,7 @@
     flex-basis: 210px;
     margin-top: -10px;
   }
-  
+
   .form-field__sights-wrap label {
     padding-left: 83px;
   }
@@ -412,7 +415,7 @@
   .form-field__sights-wrap:nth-child(4) {
     order:2;
    }
-   
+
     .form-field__comment {
     margin-top: 15px;
     margin-bottom: 35px;
@@ -455,11 +458,13 @@
   }
 
   .form-field--name::before {
-    height: 125%;
-    top: -65px;
+    /*height: 125%;
+    top: -65px;*/
+    top:0;
+    bottom:0;
     left: -70px;
   }
-  
+
   .name-hide {
     display: inline;
   }
