@@ -113,7 +113,25 @@ module.exports = function(grunt) {
         src: ["build/img/**/*.{png,jpg,gif}"]
       }]
     }
+  },
+
+  uglify: {
+    js_min: {
+      files: {
+        "build/js/main.min.js": ["build/js/main.js"]
+      }
+    }
+  },
+
+  svgmin: {
+    symbols: {
+      files: [{
+        expand: true,
+        src: ["build/img/*.svg"]
+      }]
+    }
   }
+
 
 
 
@@ -126,6 +144,7 @@ module.exports = function(grunt) {
     "less",
     "postcss",
     "csso",
+    "uglify",
     "imagemin"
     ]);
 };
