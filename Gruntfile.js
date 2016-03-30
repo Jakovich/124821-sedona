@@ -129,6 +129,25 @@ module.exports = function(grunt) {
         expand: true,
         src: ["build/img/*.svg"]
       }]
+    },
+    symbols_inline: {
+      files: [{
+        expand: true,
+        src: ["build/img/icons_inline/*svg"]
+      }]
+    }
+  },
+
+  svgstore: {
+    options: {
+      svg: {
+        style: "display: none"
+      }
+    },
+    symbols: {
+      files: {
+        "build/img/symbols.svg": ["build/img/icons_inline/*.svg"]
+      }
     }
   }
 
@@ -138,6 +157,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
   grunt.registerTask("build", [
     "clean",
     "copy",
@@ -145,6 +165,7 @@ module.exports = function(grunt) {
     "postcss",
     "csso",
     "uglify",
+    "symbols",
     "imagemin"
     ]);
 };
