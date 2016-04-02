@@ -72,7 +72,7 @@ module.exports = function(grunt) {
           expand: true,
           src : [
             "fonts/**/*.{woff,woff2}",
-            "img/**",
+            "img/**/*.{jpg,png,svg}",
             "js/**",
             "*html"
             ],
@@ -127,7 +127,7 @@ module.exports = function(grunt) {
     symbols: {
       files: [{
         expand: true,
-        src: ["build/img/*.svg"]
+        src: ["build/img/icons/*.svg"]
       }]
     },
     symbols_inline: {
@@ -146,7 +146,7 @@ module.exports = function(grunt) {
     },
     symbols: {
       files: {
-        "build/img/symbols.svg": ["build/img/icons_inline/*.svg"]
+        "build/img/icons/symbols.svg": ["build/img/icons/*.svg"]
       }
     }
   }
