@@ -124,7 +124,7 @@
 
         <button class="button button--search-hotel">Найти гостиницу</button>
 
-        <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d836898.9273332778!2d-111.7745384792167!3d34.97824713202381!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ%2C+USA!5e0!3m2!1sen!2sfr!4v1458990131804" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+        <div class="map" id="map-canvas"></div>
       </section>
 
 
@@ -157,6 +157,25 @@
 
     </div>
     
+    <script>
+      
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map-canvas'), {
+          center: {lat: 34.870008, lng: -111.759949},
+          zoom: 8
+        });
+     
+        var image = 'img/icons/icon-map-marker.svg';
+        var sedonaMarker = new google.maps.Marker({
+          position: {lat: 34.870008, lng: -111.759949},
+          map: map,
+          icon: image
+        });
+      };
+      
+    </script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBik3VPZ8ZJxtKjf_qFLTjD_bTn0XynGLo&callback=initMap"></script>
     <script src="js/main.js"></script>
   
   </body>
