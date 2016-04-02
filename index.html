@@ -158,24 +158,23 @@
     </div>
     
     <script>
-      
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map-canvas'), {
           center: {lat: 34.870008, lng: -111.759949},
           zoom: 8
         });
-     
         var image = 'img/icons/icon-map-marker.svg';
         var sedonaMarker = new google.maps.Marker({
           position: {lat: 34.870008, lng: -111.759949},
           map: map,
-          icon: image
+          icon: image,
+          title: "Sedona"
         });
       };
-      
     </script>
     
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBik3VPZ8ZJxtKjf_qFLTjD_bTn0XynGLo&callback=initMap"></script>
+    
     <script src="js/main.js"></script>
   
   </body>
