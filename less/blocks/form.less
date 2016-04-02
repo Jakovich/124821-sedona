@@ -284,7 +284,7 @@
     order: -1;
     box-sizing: border-box;
     width: 58%;
-    margin-bottom:48px;
+    margin-bottom: 48px;
   }
 
   .form-field--name {
@@ -310,11 +310,18 @@
   .form-field--name::before {
     content: '';
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 10px;
+    bottom: 10px;
     width: 1px;
     background-color: #e5e5e5;
     left: -52px;
+  }
+  
+  /*для фикса бага элемента legend в Mozilla*/
+  @-moz-document url-prefix() {
+    .form-field--name::before {
+      top: -72px;
+    }
   }
 
   .form-field__name-wrap label {
@@ -455,11 +462,7 @@
   }
 
   .form-field--name::before {
-    /*height: 125%;
-    top: -65px;*/
-    top: 0;
-    bottom: 0;
-    left: -70px;
+    left: -80px;
   }
 
   .name-hide {
