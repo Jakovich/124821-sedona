@@ -317,7 +317,7 @@
     left: -52px;
   }
   
-  /*для фикса бага элемента legend в Mozilla*/
+  /*для фикса бага псевдоэлемента в Mozilla (before не видит legend в составе fieldset)*/
   @-moz-document url-prefix() {
     .form-field--name::before {
       top: -72px;
