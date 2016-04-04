@@ -56,9 +56,8 @@
 }
 
 .form-field__name-wrap input {
- flex-grow: 1;
+  flex-grow: 1;
   width: 20px;
-
 }
 
 .form-field__name-wrap:nth-child(n+3) label{
@@ -68,7 +67,7 @@
 
 /*контактная информация*/
 .form-field__contact-wrap {
-   position: relative;
+  position: relative;
 }
 
 .form-field__contact-wrap input{
@@ -82,7 +81,7 @@
   margin-top:10px;
 }
 
-.error {
+.form__error {
   padding-left:20px;
   text-transform: none;
   color: #ff5c5c;
@@ -90,7 +89,7 @@
 }
 
 .form-field__contact-wrap::before {
-  content:"";
+  content: "";
   position: absolute;
   width: 58px;
   height: 58px;
@@ -102,11 +101,11 @@
 }
 
 .form-field__contact-wrap:nth-child(2)::before {
-  background-image: url('../img/icon-phone.svg');
+  background-image: url('../img/icons/icon-phone.svg');
 }
 
 .form-field__contact-wrap:nth-child(3)::before {
-  background-image: url('../img/icon-mail.svg');
+  background-image: url('../img/icons/icon-mail.svg');
 }
 
 .form__explic {
@@ -217,7 +216,7 @@
   top: 5px;
   left: 15px;
   height: 17px;
-  background-image: url("../img/icon-tick.svg");
+  background-image: url("../img/icons/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -259,15 +258,15 @@
 
 @media @mobile-widths {
 
-.form-field__title::before {
-  position: absolute;
-  content: "";
-  height: 1px;
-  background-color: #e5e5e5;
-  right: -20px;
-  left: -20px;
-  top: -7px;
-}
+  .form-field__title::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: #e5e5e5;
+    right: -20px;
+    left: -20px;
+    top: -7px;
+  }
 }
 
 @media @tablet-widths {
@@ -285,17 +284,20 @@
     order: -1;
     box-sizing: border-box;
     width: 58%;
+    margin-bottom: 48px;
   }
 
   .form-field--name {
     width: 42%;
     box-sizing: border-box;
     position: relative;
+    margin-bottom: 48px;
   }
 
   .form-field__title {
     border: none;
     display: inline-block;
+    vertical-align: middle;
     box-sizing: border-box;
     font-size: 21px;
     line-height: 26px;
@@ -308,14 +310,18 @@
   .form-field--name::before {
     content: '';
     position: absolute;
-    /*
-    height: 125%;
-    top: -65px*/;
-    top: 0;
-    bottom: 0;
+    top: 10px;
+    bottom: 10px;
     width: 1px;
     background-color: #e5e5e5;
     left: -52px;
+  }
+  
+  /*для фикса бага псевдоэлемента в Mozilla (before не видит legend в составе fieldset)*/
+  @-moz-document url-prefix() {
+    .form-field--name::before {
+      top: -72px;
+    }
   }
 
   .form-field__name-wrap label {
@@ -336,12 +342,16 @@
   .form-field--comment {
     width: 100%;
   }
+  
+  .form-field--contact {
+    margin-bottom: 40px;
+  }
 
   .form-field--contact .form-field__title,
   .form-field--sights .form-field__title,
   .form-field--comment .form-field__title {
     position: relative;
-
+    
     &::before,
     &::after {
       content: '';
@@ -363,7 +373,7 @@
   }
 
   .form-field--contact .form-field__title {
-    margin-top: 28px;
+    margin-top: 0;
     margin-bottom: 5px;
   }
 
@@ -371,7 +381,7 @@
     margin-bottom: 53px;
   }
 
-  .error {
+  .form__error {
     position: absolute;
     right: 0;
     top: 0;
@@ -382,10 +392,8 @@
   }
 
   .form-field--sights .form-field__title {
-    margin-top: 15px;
+    margin-top: 0;
   }
-
-
 
   .sights__container {
     display: flex;
@@ -405,7 +413,7 @@
   }
 
   .form-field__sights-wrap:nth-child(2) {
-    order:1;
+    order: 1;
   }
 
   .form-field__sights-wrap:nth-child(3) {
@@ -413,13 +421,13 @@
   }
 
   .form-field__sights-wrap:nth-child(4) {
-    order:2;
-   }
+    order: 2;
+  }
 
-    .form-field__comment {
+  .form-field__comment {
     margin-top: 15px;
     margin-bottom: 35px;
-    }
+  }
 
   .form__explic {
     display: inline-block;
@@ -458,11 +466,7 @@
   }
 
   .form-field--name::before {
-    /*height: 125%;
-    top: -65px;*/
-    top:0;
-    bottom:0;
-    left: -70px;
+    left: -80px;
   }
 
   .name-hide {
@@ -473,7 +477,7 @@
     display: none;
   }
 
-  .error {
+  .form__error {
     left: 85px;
     top: -15px;
   }
@@ -484,17 +488,17 @@
 
   .form-field--contact .form-field__title {
     margin-bottom: 40px;
-}
+  }
 
-   .form-field__contact-wrap {
-     display: flex;
-     align-items: center;
-     padding-left:0;
-     box-sizing: border-box;
+  .form-field__contact-wrap {
+    display: flex;
+    align-items: center;
+    padding-left:0;
+    box-sizing: border-box;
     width: 50%;
     padding: 10px 0;
-     float: left;
-   }
+    float: left;
+  }
 
   .form-field__contact-wrap input {
     box-sizing: border-box;

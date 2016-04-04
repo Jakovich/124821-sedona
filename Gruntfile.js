@@ -72,8 +72,8 @@ module.exports = function(grunt) {
           expand: true,
           src : [
             "fonts/**/*.{woff,woff2}",
-            "img/**",
-            "js/**",
+            "img/**/*.{jpg,png,svg}",
+            "js/**/*.js",
             "*html"
             ],
           dest: "build"
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
   uglify: {
     js_min: {
       files: {
-        "build/js/main.min.js": ["build/js/main.js"]
+        "build/js/main.min.js": ["build/js/main.js", "build/js/picturefill.min.js"]
       }
     }
   },
@@ -127,13 +127,19 @@ module.exports = function(grunt) {
     symbols: {
       files: [{
         expand: true,
-        src: ["build/img/*.svg"]
+        src: ["build/img/icons/*.svg"]
       }]
     },
     symbols_inline: {
       files: [{
         expand: true,
-        src: ["build/img/icons_inline/*svg"]
+        src: ["build/img/icons_inline/*.svg"]
+      }]
+    },
+    svg: {
+      files: [{
+        expand: true,
+        src: ["build/img/*.svg"]
       }]
     }
   },
@@ -146,7 +152,7 @@ module.exports = function(grunt) {
     },
     symbols: {
       files: {
-        "build/img/symbols.svg": ["build/img/icons_inline/*.svg"]
+        "build/img/icons/symbols.svg": ["build/img/icons/*.svg"]
       }
     }
   }
