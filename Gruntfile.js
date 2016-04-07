@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             "last 2 Edge versions"
           ]}),
           require("css-mqpacker")({
-            sort: true
+            sort: false
           })
         ]
       },
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
   uglify: {
     js_min: {
       files: {
-        "build/js/main.min.js": ["build/js/main.js", "build/js/picturefill.min.js"]
+        "build/js/main.min.js": ["build/js/main.js"]
       }
     }
   },

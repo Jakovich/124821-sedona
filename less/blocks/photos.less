@@ -1,5 +1,6 @@
 .photo__img {
   display: block;
+  width: 100%;
 }
 
 .photo__title {
@@ -30,7 +31,7 @@
 }
 
 @media @mobile-widths {
-  
+
   .photo__item {
     padding: 0 20px;
     padding-top: 18px;
@@ -72,11 +73,11 @@
     align-items: center;
     background-color: @bg-grey;
   }
-  
+
   .photo__title {
     margin-bottom: 3px;
   }
-  
+
   .photo__author {
     margin-top: 3px;
   }
@@ -115,11 +116,12 @@
     color: #ffffff;
   }
 
-   .photo__item:nth-child(n+2):nth-child(odd) .photo__describ {
+  .photo__item:nth-child(n+2):nth-child(odd) .photo__describ {
     background-color: rgba(0,0,0,0.3);
   }
 
   .photo__likes::before {
-    filter: invert(1);
+    background-image: url("../img/icons/icon-like--white.svg");
   }
+  
 }
